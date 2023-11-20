@@ -69,10 +69,10 @@
             "loading" != document.readyState
                 ? e()
                 : document.addEventListener
-                ? document.addEventListener("DOMContentLoaded", e)
-                : document.attachEvent("onreadystatechange", function () {
-                      "complete" == document.readyState && e();
-                  });
+                  ? document.addEventListener("DOMContentLoaded", e)
+                  : document.attachEvent("onreadystatechange", function () {
+                        "complete" == document.readyState && e();
+                    });
         };
         (window.initThebeSBT = () => {
             var e = $("div.section h1")[0];

@@ -2,17 +2,19 @@
     typeof exports === "object" && typeof module !== "undefined"
         ? (module.exports = factory())
         : typeof define === "function" && define.amd
-        ? define("underscore", factory)
-        : ((global =
-              typeof globalThis !== "undefined" ? globalThis : global || self),
-          (function () {
-              var current = global._;
-              var exports = (global._ = factory());
-              exports.noConflict = function () {
-                  global._ = current;
-                  return exports;
-              };
-          })());
+          ? define("underscore", factory)
+          : ((global =
+                typeof globalThis !== "undefined"
+                    ? globalThis
+                    : global || self),
+            (function () {
+                var current = global._;
+                var exports = (global._ = factory());
+                exports.noConflict = function () {
+                    global._ = current;
+                    return exports;
+                };
+            })());
 })(this, function () {
     //     Underscore.js 1.13.1
     //     https://underscorejs.org

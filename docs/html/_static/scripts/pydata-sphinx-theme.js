@@ -187,8 +187,8 @@
                             ? h(n)
                             : n
                         : t
-                        ? t.ownerDocument.documentElement
-                        : document.documentElement;
+                          ? t.ownerDocument.documentElement
+                          : document.documentElement;
                 }
                 function p(t) {
                     return null !== t.parentNode ? p(t.parentNode) : t;
@@ -849,8 +849,10 @@
                                         -1 !== ["+", "-"].indexOf(e)
                                         ? ((t[t.length - 1] = e), (a = !0), t)
                                         : a
-                                        ? ((t[t.length - 1] += e), (a = !1), t)
-                                        : t.concat(e);
+                                          ? ((t[t.length - 1] += e),
+                                            (a = !1),
+                                            t)
+                                          : t.concat(e);
                                 }, [])
                                 .map(function (t) {
                                     return (function (t, e, n, i) {
@@ -960,14 +962,14 @@
                                             ? ((r.top += l[0]),
                                               (r.left -= l[1]))
                                             : "right" === s
-                                            ? ((r.top += l[0]),
-                                              (r.left += l[1]))
-                                            : "top" === s
-                                            ? ((r.left += l[0]),
-                                              (r.top -= l[1]))
-                                            : "bottom" === s &&
-                                              ((r.left += l[0]),
-                                              (r.top += l[1])),
+                                              ? ((r.top += l[0]),
+                                                (r.left += l[1]))
+                                              : "top" === s
+                                                ? ((r.left += l[0]),
+                                                  (r.top -= l[1]))
+                                                : "bottom" === s &&
+                                                  ((r.left += l[0]),
+                                                  (r.top += l[1])),
                                         (t.popper = r),
                                         t
                                     );
@@ -1252,8 +1254,8 @@
                                                         return "end" === t
                                                             ? "start"
                                                             : "start" === t
-                                                            ? "end"
-                                                            : t;
+                                                              ? "end"
+                                                              : t;
                                                     })(r)),
                                                 (t.placement =
                                                     i + (r ? "-" + r : "")),
@@ -1721,11 +1723,11 @@
                                     r && d.isElement(r)
                                         ? "element"
                                         : null == (s = r)
-                                        ? "" + s
-                                        : {}.toString
-                                              .call(s)
-                                              .match(/\s([a-z]+)/i)[1]
-                                              .toLowerCase();
+                                          ? "" + s
+                                          : {}.toString
+                                                .call(s)
+                                                .match(/\s([a-z]+)/i)[1]
+                                                .toLowerCase();
                             if (!new RegExp(o).test(a))
                                 throw new Error(
                                     t.toUpperCase() +
@@ -1749,8 +1751,8 @@
                     return t instanceof ShadowRoot
                         ? t
                         : t.parentNode
-                        ? d.findShadowRoot(t.parentNode)
-                        : null;
+                          ? d.findShadowRoot(t.parentNode)
+                          : null;
                 },
                 jQueryDetection: function () {
                     if (void 0 === o.default)
@@ -3113,13 +3115,14 @@
                                           ? "top-end"
                                           : "top-start")
                                     : t.hasClass("dropright")
-                                    ? (e = "right-start")
-                                    : t.hasClass("dropleft")
-                                    ? (e = "left-start")
-                                    : o
-                                          .default(this._menu)
-                                          .hasClass("dropdown-menu-right") &&
-                                      (e = "bottom-end"),
+                                      ? (e = "right-start")
+                                      : t.hasClass("dropleft")
+                                        ? (e = "left-start")
+                                        : o
+                                              .default(this._menu)
+                                              .hasClass(
+                                                  "dropdown-menu-right",
+                                              ) && (e = "bottom-end"),
                                 e
                             );
                         }),
@@ -4378,9 +4381,9 @@
                                       t.html(e))
                                     : t.text(e)
                                 : this.config.html
-                                ? o.default(e).parent().is(t) ||
-                                  t.empty().append(e)
-                                : t.text(o.default(e).text());
+                                  ? o.default(e).parent().is(t) ||
+                                    t.empty().append(e)
+                                  : t.text(o.default(e).text());
                         }),
                         (e.getTitle = function () {
                             var t = this.element.getAttribute(
@@ -4454,10 +4457,10 @@
                             return !1 === this.config.container
                                 ? document.body
                                 : d.isElement(this.config.container)
-                                ? o.default(this.config.container)
-                                : o
-                                      .default(document)
-                                      .find(this.config.container);
+                                  ? o.default(this.config.container)
+                                  : o
+                                        .default(document)
+                                        .find(this.config.container);
                         }),
                         (e._getAttachment = function (t) {
                             return z[t.toUpperCase()];

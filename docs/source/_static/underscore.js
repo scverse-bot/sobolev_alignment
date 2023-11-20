@@ -2,15 +2,15 @@
     "object" == typeof exports && "undefined" != typeof module
         ? (module.exports = r())
         : "function" == typeof define && define.amd
-        ? define("underscore", r)
-        : ((n = "undefined" != typeof globalThis ? globalThis : n || self),
-          (function () {
-              var t = n._,
-                  e = (n._ = r());
-              e.noConflict = function () {
-                  return (n._ = t), e;
-              };
-          })());
+          ? define("underscore", r)
+          : ((n = "undefined" != typeof globalThis ? globalThis : n || self),
+            (function () {
+                var t = n._,
+                    e = (n._ = r());
+                e.noConflict = function () {
+                    return (n._ = t), e;
+                };
+            })());
 })(this, function () {
     //     Underscore.js 1.13.1
     //     https://underscorejs.org
@@ -195,8 +195,8 @@
         return n instanceof tn
             ? n
             : this instanceof tn
-            ? void (this._wrapped = n)
-            : new tn(n);
+              ? void (this._wrapped = n)
+              : new tn(n);
     }
     function en(n) {
         return new Uint8Array(n.buffer || n, n.byteOffset || 0, G(n));
@@ -234,8 +234,8 @@
                         return +r != +r
                             ? +t != +t
                             : 0 == +r
-                            ? 1 / +r == 1 / t
-                            : +r == +t;
+                              ? 1 / +r == 1 / t
+                              : +r == +t;
                     case "[object Date]":
                     case "[object Boolean]":
                         return +r == +t;
@@ -414,10 +414,10 @@
         return null == n
             ? kn
             : D(n)
-            ? Fn(n, r, t)
-            : _(n) && !U(n)
-            ? Dn(n)
-            : Rn(n);
+              ? Fn(n, r, t)
+              : _(n) && !U(n)
+                ? Dn(n)
+                : Rn(n);
     }
     function Pn(n, r) {
         return Vn(n, r, 1 / 0);
@@ -785,8 +785,8 @@
                 ? void 0
                 : []
             : null == r || t
-            ? n[0]
-            : zr(n, n.length - r);
+              ? n[0]
+              : zr(n, n.length - r);
     }
     function $r(n, r, t) {
         return i.call(n, null == r || t ? 1 : r);
@@ -810,8 +810,8 @@
             r && !t
                 ? ((i && o === c) || u.push(f), (o = c))
                 : t
-                ? Er(o, c) || (o.push(c), u.push(f))
-                : Er(u, f) || u.push(f);
+                  ? Er(o, c) || (o.push(c), u.push(f))
+                  : Er(u, f) || u.push(f);
         }
         return u;
     }
@@ -998,8 +998,8 @@
                               t +
                               "))==null?'':_.escape(__t))+\n'")
                         : e
-                        ? (o += "'+\n((__t=(" + e + "))==null?'':__t)+\n'")
-                        : i && (o += "';\n" + i + "\n__p+='"),
+                          ? (o += "'+\n((__t=(" + e + "))==null?'':__t)+\n'")
+                          : i && (o += "';\n" + i + "\n__p+='"),
                     r
                 );
             }),
@@ -1233,10 +1233,10 @@
                 ? U(n)
                     ? i.call(n)
                     : S(n)
-                    ? n.match(Pr)
-                    : er(n)
-                    ? _r(n, kn)
-                    : jn(n)
+                      ? n.match(Pr)
+                      : er(n)
+                        ? _r(n, kn)
+                        : jn(n)
                 : [];
         },
         size: function (n) {
@@ -1254,8 +1254,8 @@
                     ? void 0
                     : []
                 : null == r || t
-                ? n[n.length - 1]
-                : $r(n, Math.max(0, n.length - r));
+                  ? n[n.length - 1]
+                  : $r(n, Math.max(0, n.length - r));
         },
         rest: $r,
         tail: $r,
